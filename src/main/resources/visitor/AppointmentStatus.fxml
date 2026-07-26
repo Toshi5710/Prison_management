@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.visitor.AppointmentStatusController">
+   <children>
+      <Text layoutX="249.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Status" />
+      <TextField layoutX="56.0" layoutY="50.0" text="Appointment Token" />
+      <Button layoutX="417.0" layoutY="63.0" mnemonicParsing="false" text="Check Status" />
+      <TableView layoutX="31.0" layoutY="167.0" prefHeight="189.0" prefWidth="554.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Token" />
+          <TableColumn prefWidth="75.0" text="Prisoner" />
+            <TableColumn prefWidth="75.0" text="Visit Date" />
+            <TableColumn prefWidth="75.0" text="Status" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
