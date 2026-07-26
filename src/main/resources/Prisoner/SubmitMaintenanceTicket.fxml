@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.Prisoner.SubmitMaintenanceTicketController">
+   <children>
+      <Text layoutX="228.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Submit Maintenance Ticket" />
+      <ComboBox fx:id="IssueCategoryComboBox" layoutX="225.0" layoutY="66.0" prefWidth="150.0" promptText="Issue Category" />
+      <TextField fx:id="IssueDescriptionTF" layoutX="59.0" layoutY="149.0" prefHeight="130.0" prefWidth="487.0" />
+      <Text layoutX="59.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Issue Description :" />
+      <Button layoutX="257.0" layoutY="306.0" mnemonicParsing="false" onAction="#FileGrievanceOA" prefHeight="47.0" prefWidth="90.0" text="File Grievance" />
+   </children>
+</AnchorPane>
