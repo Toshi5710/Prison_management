@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.ChiefSecurityGuard.ChiefSecurityGuardController">
+   <children>
+      <Button layoutX="81.0" layoutY="60.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" text="Security Cameras" />
+      <Button layoutX="396.0" layoutY="60.0" mnemonicParsing="false" text="Prisoner Head Count" />
+      <Button layoutX="81.0" layoutY="135.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="134.0" text="Gate Security" />
+      <Button layoutX="392.0" layoutY="135.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="134.0" text="Cell Inspection" />
+      <Button layoutX="81.0" layoutY="208.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="134.0" text="Leave Requests" />
+      <Button layoutX="392.0" layoutY="208.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="149.0" text="Security Transfer" />
+      <Button layoutX="260.0" layoutY="302.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="107.0" text="Logout" />
+   </children>
+</AnchorPane>
