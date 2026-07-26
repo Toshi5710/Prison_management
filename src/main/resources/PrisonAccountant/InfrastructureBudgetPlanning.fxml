@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.PrisonAccountant.InfrastructureBudgetPlanningViewController">
+   <children>
+      <TextField layoutX="492.0" layoutY="86.0" />
+      <TextField layoutX="486.0" layoutY="31.0" />
+      <TextArea layoutX="56.0" layoutY="31.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button layoutX="531.0" layoutY="158.0" mnemonicParsing="false" text="Calculate Costs" />
+      <Button layoutX="486.0" layoutY="218.0" mnemonicParsing="false" text="Submit Proposal to Warden" />
+      <Label layoutX="156.0" layoutY="317.0" text="Confirmation: &quot;Proposal submitted to budget_proposals.txt&quot;" />
+      <Label layoutX="305.0" layoutY="35.0" text="Facility Expansion Project Name" />
+      <Label layoutX="256.0" layoutY="90.0" prefHeight="18.0" prefWidth="232.0" text="Projected Construction &amp; Operational Costs" />
+   </children>
+</AnchorPane>
