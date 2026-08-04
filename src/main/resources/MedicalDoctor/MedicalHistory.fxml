@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.MedicalDoctor.MedicalHistoryController">
+<AnchorPane prefHeight="494.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.MedicalDoctor.MedicalHistoryController">
    <children>
-      <Text layoutX="52.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Prisoner ID: " wrappingWidth="130.13665771484375" />
-      <TextField layoutX="193.0" layoutY="48.0" />
-      <TableView layoutX="52.0" layoutY="131.0" prefHeight="200.0" prefWidth="467.0">
+      <Text layoutX="75.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Prisoner ID: " wrappingWidth="130.13665771484375" />
+      <TextField fx:id="enterPrisonerIDTextField" layoutX="216.0" layoutY="82.0" />
+      <TableView layoutX="66.0" layoutY="203.0" prefHeight="200.0" prefWidth="467.0">
         <columns>
-          <TableColumn prefWidth="159.20001220703125" text="Date" />
-          <TableColumn prefWidth="140.0" text="Diagnosis" />
-            <TableColumn prefWidth="168.0" text="Treatment" />
+          <TableColumn fx:id="dateTableColumn" prefWidth="159.20001220703125" text="Date" />
+          <TableColumn fx:id="diagnosisTableColumn" prefWidth="140.0" text="Diagnosis" />
+            <TableColumn fx:id="treatmentTableColumn" prefWidth="168.0" text="Treatment" />
         </columns>
       </TableView>
+      <Button layoutX="248.0" layoutY="162.0" mnemonicParsing="false" onAction="#fetchhHstoryButtonOA" text="Fetch History" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonOA" prefHeight="26.0" prefWidth="76.0" text="Back" />
    </children>
 </AnchorPane>

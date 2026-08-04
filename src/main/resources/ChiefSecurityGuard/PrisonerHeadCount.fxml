@@ -9,27 +9,23 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="610.0" prefWidth="763.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.ChiefSecurityGuard.PrisonerHeadCountController">
    <children>
       <Text layoutX="80.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Block Number :" wrappingWidth="111.73675537109375" />
-      <TextField layoutX="226.0" layoutY="46.0" />
-      <ComboBox layoutX="226.0" layoutY="99.0" prefWidth="150.0" />
-      <Text layoutX="80.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shift :" wrappingWidth="111.73675537109375" />
-      <Text layoutX="78.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prisoner ID :" wrappingWidth="111.73675537109375" />
-      <TextField layoutX="224.0" layoutY="145.0" />
-      <Text layoutX="433.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Prisoner Name :" wrappingWidth="111.73675537109375" />
-      <TextField layoutX="579.0" layoutY="145.0" />
-      <Text layoutX="76.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Status :" wrappingWidth="111.73675537109375" />
-      <TextField layoutX="222.0" layoutY="187.0" />
-      <Button layoutX="276.0" layoutY="261.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="174.0" text="Take Head Count" />
-      <TableView layoutX="176.0" layoutY="317.0" prefHeight="200.0" prefWidth="390.0">
+      <TextField fx:id="blockNumnerTextField" layoutX="226.0" layoutY="46.0" />
+      <ComboBox fx:id="shiftComboBox" layoutX="502.0" layoutY="46.0" prefWidth="150.0" />
+      <Text layoutX="450.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shift :" wrappingWidth="45.336822509765625" />
+      <Text layoutX="120.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Status :" wrappingWidth="111.73675537109375" />
+      <TextField fx:id="statusTextField" layoutX="230.0" layoutY="102.0" />
+      <Button layoutX="266.0" layoutY="181.0" mnemonicParsing="false" onAction="#takeHeadCountButtonOA" prefHeight="26.0" prefWidth="174.0" text="Take Head Count" />
+      <TableView layoutX="92.0" layoutY="251.0" prefHeight="200.0" prefWidth="538.0">
         <columns>
-          <TableColumn prefWidth="190.39996337890625" text="Block Num " />
-          <TableColumn prefWidth="199.19998168945312" text="Total Head" />
+          <TableColumn fx:id="totalHeadTableColumn" prefWidth="199.19998168945312" text="Total Head" />
+          <TableColumn fx:id="blockNumTableColumn" prefWidth="190.39996337890625" text="Block Num " />
+            <TableColumn fx:id="statusTableColumn" prefWidth="147.19998168945312" text="Status" />
         </columns>
       </TableView>
-      <Button layoutX="67.0" layoutY="544.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="174.0" text="Save" />
-      <Label layoutX="305.0" layoutY="548.0" prefHeight="42.0" prefWidth="272.0" text="Label" />
+      <Button layoutX="67.0" layoutY="544.0" mnemonicParsing="false" onAction="#saveButtonOA" prefHeight="26.0" prefWidth="174.0" text="Save" />
+      <Label fx:id="showOutputLabel" layoutX="305.0" layoutY="548.0" prefHeight="42.0" prefWidth="272.0" text="Label" />
    </children>
 </AnchorPane>

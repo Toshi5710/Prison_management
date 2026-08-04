@@ -3,19 +3,30 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.MedicalDoctor.AppointmentSchedulerController">
+<AnchorPane prefHeight="685.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.MedicalDoctor.AppointmentSchedulerController">
    <children>
-      <Text layoutX="78.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Prisoner ID:" wrappingWidth="93.33673095703125" />
-      <TextField layoutX="209.0" layoutY="43.0" />
-      <DatePicker layoutX="209.0" layoutY="88.0" />
-      <Text layoutX="78.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date Picker :" wrappingWidth="93.33673095703125" />
-      <Text layoutX="78.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time :" wrappingWidth="93.33673095703125" />
-      <ComboBox layoutX="208.0" layoutY="140.0" prefWidth="150.0" />
-      <Button layoutX="201.0" layoutY="283.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="191.0" text="Schedule Button" />
+      <Text layoutX="65.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Prisoner ID:" wrappingWidth="93.33673095703125" />
+      <TextField fx:id="enterPrisonerIDTextField" layoutX="196.0" layoutY="349.0" />
+      <DatePicker layoutX="196.0" layoutY="394.0" />
+      <Text fx:id="fixAppointmentTDatePicker" layoutX="65.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fix appointment :" wrappingWidth="93.33673095703125" />
+      <Text layoutX="65.0" layoutY="463.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time :" wrappingWidth="93.33673095703125" />
+      <ComboBox fx:id="timeComboBox" layoutX="195.0" layoutY="446.0" prefWidth="150.0" />
+      <Button layoutX="284.0" layoutY="493.0" mnemonicParsing="false" onAction="#scheduleButtonOA" prefHeight="51.0" prefWidth="191.0" text="Schedule Button" />
+      <Button layoutX="22.0" layoutY="23.0" mnemonicParsing="false" onAction="#backButtonOA" prefHeight="26.0" prefWidth="60.0" text="Back" />
+      <Button layoutX="302.0" layoutY="36.0" mnemonicParsing="false" onAction="#sickCallRequestsButtonOA" prefHeight="26.0" prefWidth="120.0" text=" Sick Call Requests" />
+      <TableView layoutX="180.0" layoutY="103.0" prefHeight="200.0" prefWidth="330.0">
+        <columns>
+          <TableColumn fx:id="inmateIDTableColumn" prefWidth="176.79998779296875" text="Inmate ID" />
+          <TableColumn fx:id="severityCategoryTableColumn" prefWidth="160.0" text="severity category" />
+        </columns>
+      </TableView>
+      <Label fx:id="scheduleConfirmationLabel" layoutX="74.0" layoutY="553.0" prefHeight="108.0" prefWidth="592.0" text="Label" />
    </children>
 </AnchorPane>

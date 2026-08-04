@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="603.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.ChiefSecurityGuard.VisitorScreeningController">
+   <children>
+      <Text layoutX="134.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Visitor ID :" wrappingWidth="116.5367431640625" />
+      <TextField fx:id="visitorIDTextField" layoutX="235.0" layoutY="80.0" />
+      <Text layoutX="153.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name :" wrappingWidth="116.5367431640625" />
+      <TextField fx:id="nameTextField" layoutX="235.0" layoutY="120.0" />
+      <Button layoutX="256.0" layoutY="444.0" mnemonicParsing="false" onAction="#AuthorizeButtonOA" prefHeight="26.0" prefWidth="138.0" text="Authorize " />
+      <Button layoutX="406.0" layoutY="444.0" mnemonicParsing="false" onAction="#rejectButtonOA" prefHeight="26.0" prefWidth="138.0" text="Reject " />
+      <Button fx:id="backButtonOA" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Back" />
+      <Button layoutX="287.0" layoutY="175.0" mnemonicParsing="false" onAction="#verifyButtonOA" text="Verify" />
+      <TableView layoutX="56.0" layoutY="235.0" prefHeight="200.0" prefWidth="502.0">
+        <columns>
+          <TableColumn fx:id="visitorIDTableColumn" prefWidth="134.4000244140625" text="Visitor ID" />
+          <TableColumn fx:id="visitorNameTableColumn" prefWidth="200.79998779296875" text="Visitor Name" />
+            <TableColumn fx:id="statusTableColumn" prefWidth="167.20001220703125" text="Status" />
+        </columns>
+      </TableView>
+      <Label fx:id="VisitorVerificationDetailslabel" layoutX="256.0" layoutY="498.0" prefHeight="86.0" prefWidth="330.0" text="Label" />
+      <Button layoutX="38.0" layoutY="509.0" mnemonicParsing="false" onAction="#showDetailsButtonOA" prefHeight="26.0" prefWidth="128.0" text="Show Details" />
+   </children>
+</AnchorPane>

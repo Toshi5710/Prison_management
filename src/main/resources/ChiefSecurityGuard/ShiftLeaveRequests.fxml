@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="522.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.ChiefSecurityGuard.ShiftLeaveRequestsController">
+   <children>
+      <Button fx:id="backButtonOA" layoutX="32.0" layoutY="27.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="61.0" text="Back" />
+      <TableView layoutX="45.0" layoutY="94.0" prefHeight="200.0" prefWidth="491.0">
+        <columns>
+          <TableColumn fx:id="officerNameTableColumn" prefWidth="142.4000244140625" text="Officer Name" />
+          <TableColumn fx:id="officerIDTableColumn" prefWidth="107.20001220703125" text="Officer ID" />
+            <TableColumn fx:id="reasonTableColumn" prefWidth="115.199951171875" text="Reason" />
+            <TableColumn fx:id="statusTableColumn" prefWidth="126.4000244140625" text="Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="61.0" layoutY="305.0" mnemonicParsing="false" onAction="#approveLeaveButtonOA" prefHeight="26.0" prefWidth="122.0" text="Approve Leave" />
+      <Button layoutX="413.0" layoutY="305.0" mnemonicParsing="false" onAction="#denyLeaveButtonOA" prefHeight="26.0" prefWidth="122.0" text="Deny Leave" />
+      <Label fx:id="showResultsLabel" layoutX="61.0" layoutY="413.0" prefHeight="92.0" prefWidth="506.0" text="Label" />
+      <Button layoutX="68.0" layoutY="375.0" mnemonicParsing="false" onAction="#showAllRequestResultsButtonOA" text="Show all request results " />
+   </children>
+</AnchorPane>
