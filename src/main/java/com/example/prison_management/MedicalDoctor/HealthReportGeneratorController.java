@@ -1,20 +1,18 @@
 package com.example.prison_management.MedicalDoctor;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class HospitalTransferController
+public class HealthReportGeneratorController
 {
     @javafx.fxml.FXML
-    private TextField transferInmateIDTextField;
+    private TextField inmateIDTextField;
     @javafx.fxml.FXML
-    private TextField medicalNotesTextField;
+    private Label reportSummaryLabel;
     @javafx.fxml.FXML
-    private ComboBox emergencyCategoryComboBox;
-    @javafx.fxml.FXML
-    private Label transferStatusLabel;
+    private DatePicker reportingPeriodDatePicker;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -25,6 +23,6 @@ public class HospitalTransferController
     }
 
     @javafx.fxml.FXML
-    public void submitButtonOA(ActionEvent actionEvent) {
+    public void generateHealthReportButtonOA(ActionEvent actionEvent) {
     }
 }
