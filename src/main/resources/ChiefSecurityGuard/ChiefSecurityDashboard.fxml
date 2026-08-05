@@ -2,16 +2,51 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.ChiefSecurityGuard.ChiefSecurityGuardController">
    <children>
-      <Button layoutX="81.0" layoutY="60.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" text="Security Cameras" />
-      <Button layoutX="396.0" layoutY="60.0" mnemonicParsing="false" text="Prisoner Head Count" />
-      <Button layoutX="81.0" layoutY="135.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="134.0" text="Gate Security" />
-      <Button layoutX="392.0" layoutY="135.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="134.0" text="Cell Inspection" />
-      <Button layoutX="81.0" layoutY="208.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="134.0" text="Leave Requests" />
-      <Button layoutX="392.0" layoutY="208.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="149.0" text="Security Transfer" />
-      <Button layoutX="260.0" layoutY="302.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="107.0" text="Logout" />
+      <Button layoutX="85.0" layoutY="86.0" mnemonicParsing="false" onAction="#surveillanceButtonOA" prefHeight="26.0" prefWidth="126.0" text="Surveillance">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="392.0" layoutY="86.0" mnemonicParsing="false" onAction="#prisonerHeadCountButtonOA" text="Prisoner Head Count">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="81.0" layoutY="148.0" mnemonicParsing="false" onAction="#gateSecurityButtonOA" prefHeight="26.0" prefWidth="134.0" text="Gate Security">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="392.0" layoutY="148.0" mnemonicParsing="false" onAction="#cellInspectionsButtonOA" prefHeight="26.0" prefWidth="134.0" text="Cell Inspection">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="81.0" layoutY="208.0" mnemonicParsing="false" onAction="#leaveRequestsButtonOA" prefHeight="26.0" prefWidth="134.0" text="Leave Requests">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="392.0" layoutY="208.0" mnemonicParsing="false" onAction="#securityTransferButtonOA" prefHeight="26.0" prefWidth="149.0" text="Security Transfer">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="256.0" layoutY="344.0" mnemonicParsing="false" onAction="#logOutButtonOA" prefHeight="26.0" prefWidth="107.0" text="Log out">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Text layoutX="137.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chief Security Guard Dashboard" textAlignment="CENTER" wrappingWidth="282.93670654296875">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Button layoutX="81.0" layoutY="266.0" mnemonicParsing="false" onAction="#threatLevelButtonOA" prefHeight="26.0" prefWidth="134.0" text="Threat Level">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="392.0" layoutY="266.0" mnemonicParsing="false" onAction="#visitorScreeningButtonOA" prefHeight="26.0" prefWidth="134.0" text="Visitor Screening">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
    </children>
 </AnchorPane>
