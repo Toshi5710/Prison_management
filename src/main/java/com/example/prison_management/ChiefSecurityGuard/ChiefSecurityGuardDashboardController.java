@@ -2,9 +2,8 @@ package com.example.prison_management.ChiefSecurityGuard;
 
 import javafx.event.ActionEvent;
 
-public class ChiefSecurityGuardController
+public class ChiefSecurityGuardDashboardController
 {
-
     @javafx.fxml.FXML
     public void initialize() {
     }
