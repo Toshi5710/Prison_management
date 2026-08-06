@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.PrisonWarden.LegalDischargeMandatesController">
+   <children>
+      <Text layoutX="230.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Legal Discharge Mandates" />
+      <Text layoutX="161.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input target Prisoner :" />
+      <TextField fx:id="InputtargetPrisonerTF" layoutX="288.0" layoutY="85.0" />
+      <Button layoutX="238.0" layoutY="275.0" mnemonicParsing="false" onAction="#GrantPardonOA" prefHeight="43.0" prefWidth="122.0" text="Grant Pardon" />
+   </children>
+</AnchorPane>

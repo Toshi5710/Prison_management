@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.PrisonWarden.PendingFundingAllocationsController">
+   <children>
+      <Text layoutX="234.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pending Funding Allocations" />
+      <Text layoutX="68.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Proposal ID :" />
+      <TableView fx:id="PendingFundingAllocationsTV" layoutX="101.0" layoutY="54.0" prefHeight="153.0" prefWidth="398.0">
+        <columns>
+          <TableColumn fx:id="PendingProposalIDTC" prefWidth="397.6000122070312" text="Pending Proposal ID" />
+        </columns>
+      </TableView>
+      <TextField fx:id="ProposalIDTF" layoutX="150.0" layoutY="238.0" />
+      <ComboBox fx:id="DecisionComboBox" layoutX="403.0" layoutY="237.0" prefHeight="26.0" prefWidth="124.0" promptText="Decision" />
+      <Button layoutX="255.0" layoutY="324.0" mnemonicParsing="false" onAction="#SubmitDecisionOA" prefHeight="34.0" prefWidth="102.0" text="Submit Decision" />
+   </children>
+</AnchorPane>

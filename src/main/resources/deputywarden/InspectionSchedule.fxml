@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.deputywarden.InspectionScheduleController">
+   <children>
+      <Text layoutX="237.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inspection Schedule" />
+      <DatePicker layoutX="39.0" layoutY="71.0" />
+      <ComboBox layoutX="39.0" layoutY="118.0" prefWidth="150.0" promptText="Block" />
+      <ComboBox layoutX="30.0" layoutY="164.0" prefWidth="150.0" promptText="Inspectionn Team" />
+      <Button layoutX="75.0" layoutY="229.0" mnemonicParsing="false" text="Schedule" />
+      <Button layoutX="62.0" layoutY="326.0" mnemonicParsing="false" text="Clear" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.PrisonWarden.AccountRevocationsController">
+   <children>
+      <Text layoutX="245.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Revocations" />
+      <Text layoutX="94.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input target Employee ID :" />
+      <TextField fx:id="InputTargetEmployeeIDTF" layoutX="246.0" layoutY="86.0" />
+      <CheckBox fx:id="ActiveAccountCheckBox" layoutX="242.0" layoutY="129.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="182.0" text="Active Account" />
+      <Button layoutX="237.0" layoutY="251.0" mnemonicParsing="false" onAction="#SaveAccessSettingsOA" prefHeight="54.0" prefWidth="126.0" text="Save Access Settings" />
+   </children>
+</AnchorPane>

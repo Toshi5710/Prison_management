@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.Prisoner.PrisonerDashBoardController">
+   <children>
+      <Text layoutX="244.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prisoner Dash Board" />
+      <Button layoutX="38.0" layoutY="77.0" mnemonicParsing="false" onAction="#CommissaryBalanceOA" prefHeight="26.0" prefWidth="160.0" text="Commissary Balance" />
+      <Button layoutX="38.0" layoutY="125.0" mnemonicParsing="false" onAction="#CommissaryShopOA" prefHeight="26.0" prefWidth="160.0" text="Commissary Shop" />
+      <Button layoutX="39.0" layoutY="174.0" mnemonicParsing="false" onAction="#MyCaseCalendarOA" prefHeight="26.0" prefWidth="160.0" text="My Case Calendar" />
+      <Button layoutX="38.0" layoutY="223.0" mnemonicParsing="false" onAction="#CourseEnrollmentOA" prefHeight="26.0" prefWidth="160.0" text="Course Enrollment" />
+      <Button layoutX="398.0" layoutY="76.0" mnemonicParsing="false" onAction="#LibraryBookSearchOA" prefHeight="26.0" prefWidth="160.0" text="Library Book Search" />
+      <Button layoutX="398.0" layoutY="124.0" mnemonicParsing="false" onAction="#RequestMedicalVisitOA" prefHeight="26.0" prefWidth="160.0" text="Request Medical Visit" />
+      <Button layoutX="398.0" layoutY="173.0" mnemonicParsing="false" onAction="#MyActivePrescriptionsOA" prefHeight="26.0" prefWidth="160.0" text="My Active Prescriptions" />
+      <Button layoutX="398.0" layoutY="224.0" mnemonicParsing="false" onAction="#SubmitMaintenanceTicketOA" text="Submit Maintenance Ticket" />
+      <Button layoutX="262.0" layoutY="291.0" mnemonicParsing="false" onAction="#LogOutOA" prefHeight="42.0" prefWidth="76.0" text="LogOut" />
+   </children>
+</AnchorPane>
