@@ -4,20 +4,44 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.ChiefSecurityGuard.CellInspectionController">
+<AnchorPane prefHeight="712.0" prefWidth="851.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.ChiefSecurityGuard.CellInspectionController">
    <children>
       <Text layoutX="69.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cell Number :" wrappingWidth="90.93670654296875" />
-      <TextField fx:id="cellNumberButtonOA" layoutX="176.0" layoutY="88.0" />
+      <TextField fx:id="cellNumberTextField" layoutX="176.0" layoutY="88.0" />
       <DatePicker fx:id="inspectionDateDatePicker" layoutX="176.0" layoutY="130.0" />
       <Text layoutX="69.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inspection Date :" wrappingWidth="90.93670654296875" />
       <Text layoutX="69.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report Status :" wrappingWidth="90.93670654296875" />
-      <Button layoutX="206.0" layoutY="230.0" mnemonicParsing="false" onAction="#saveReportButtonOA" prefHeight="26.0" prefWidth="162.0" text="Save Report" />
-      <Label fx:id="showReportsInfoLabel" layoutX="94.0" layoutY="291.0" prefHeight="66.0" prefWidth="386.0" text="Label" />
+      <Button layoutX="344.0" layoutY="249.0" mnemonicParsing="false" onAction="#saveReportButtonOA" prefHeight="26.0" prefWidth="162.0" text="Save Report">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
       <ComboBox fx:id="reportStatusComboBox" layoutX="176.0" layoutY="174.0" prefWidth="150.0" />
       <Button layoutX="33.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonOA" prefHeight="26.0" prefWidth="66.0" text="Back" />
+      <Text layoutX="412.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report ID :" wrappingWidth="90.93670654296875" />
+      <TextField fx:id="reportIDTextField" layoutX="519.0" layoutY="87.0" />
+      <Text layoutX="412.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remarks :" wrappingWidth="90.93670654296875" />
+      <TextField fx:id="remarksTextField" layoutX="519.0" layoutY="138.0" />
+      <Label fx:id="showSuccessMessageLabel" layoutX="299.0" layoutY="19.0" prefHeight="26.0" prefWidth="330.0" text="Label" />
+      <TableView fx:id="detailsTableView" layoutX="18.0" layoutY="402.0" prefHeight="274.0" prefWidth="814.0">
+        <columns>
+          <TableColumn fx:id="cellNumberTableColumn" prefWidth="133.5999813079834" text="Cell Number" />
+          <TableColumn fx:id="reportIDTableColumn" prefWidth="153.5999755859375" text="Report ID" />
+            <TableColumn fx:id="remarksTableColumn" prefWidth="172.79995727539062" text="Remarks" />
+            <TableColumn fx:id="inspectionDateTableColumn" prefWidth="179.99990844726562" text="Inspection Date" />
+            <TableColumn fx:id="reportStatusTableColumn" prefWidth="185.60009765625" text="Report Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="344.0" layoutY="343.0" mnemonicParsing="false" onAction="#showAllDetailsOnTableButtonOA" prefHeight="26.0" prefWidth="162.0" text="Show all details on Table">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
