@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.deputywarden.CapacityMonitoringController">
+   <children>
+      <Text layoutX="257.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Capacity Monitoring" />
+      <TableView layoutX="82.0" layoutY="80.0" prefHeight="191.0" prefWidth="491.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Cell Block" />
+          <TableColumn prefWidth="75.0" text="Capacity" />
+            <TableColumn prefWidth="75.0" text="Occupied" />
+            <TableColumn prefWidth="75.0" text="Available" />
+            <TableColumn prefWidth="75.0" text="Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="66.0" layoutY="322.0" mnemonicParsing="false" text="Refresh" />
+      <Button layoutX="376.0" layoutY="310.0" mnemonicParsing="false" text="Generate Warning" />
+   </children>
+</AnchorPane>

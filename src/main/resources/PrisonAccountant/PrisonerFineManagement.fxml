@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.PrisonAccountant.PrisonerFineManagementViewController">
+   <children>
+      <TextField layoutX="414.0" layoutY="77.0" />
+      <TextField layoutX="407.0" layoutY="25.0" />
+      <TableView layoutX="14.0" layoutY="67.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <Button layoutX="470.0" layoutY="209.0" mnemonicParsing="false" text="Fetch Fine Details" />
+      <Button layoutX="439.0" layoutY="254.0" mnemonicParsing="false" text="Update Payment Status" />
+      <Label layoutX="240.0" layoutY="328.0" text="Updated balance display" />
+      <Label layoutX="333.0" layoutY="29.0" text="Search Fine" />
+      <Label layoutX="305.0" layoutY="81.0" text="Payment Amount" />
+   </children>
+</AnchorPane>
