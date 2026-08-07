@@ -8,10 +8,10 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="646.0" prefWidth="728.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.ChiefSecurityGuard.CargoGateRegistryController">
+<AnchorPane prefHeight="706.0" prefWidth="728.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.ChiefSecurityGuard.CargoGateRegistryController">
    <children>
       <Text layoutX="59.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Driver Name :" wrappingWidth="88.53671264648438" />
       <TextField fx:id="driverNameTextField" layoutX="177.0" layoutY="56.0" />
@@ -19,22 +19,28 @@
       <TextField fx:id="licensePlateTextField" layoutX="177.0" layoutY="102.0" />
       <DatePicker fx:id="entryDatePicker" layoutX="177.0" layoutY="149.0" />
       <Text layoutX="63.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entry Date :" wrappingWidth="72.5367431640625" />
-      <TextField fx:id="timeTextField" layoutX="534.0" layoutY="93.0" />
-      <Text layoutX="468.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time :" />
-      <Button layoutX="260.0" layoutY="197.0" mnemonicParsing="false" onAction="#authorizeEntryInformationButtonOA" prefHeight="26.0" prefWidth="195.0" text="Authorize Entry Information" />
-      <ComboBox fx:id="accessEntryComboBox" layoutX="534.0" layoutY="148.0" prefWidth="150.0" />
-      <Text layoutX="427.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Access Entry :" wrappingWidth="113.68011474609375" />
-      <TableView layoutX="26.0" layoutY="239.0" prefHeight="200.0" prefWidth="664.0">
+      <TextField fx:id="timeTextField" layoutX="481.0" layoutY="51.0" />
+      <Text layoutX="417.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time :" />
+      <Button layoutX="266.0" layoutY="203.0" mnemonicParsing="false" onAction="#authorizeEntryInformationButtonOA" prefHeight="26.0" prefWidth="195.0" text="Authorize Entry Information">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <ComboBox fx:id="accessEntryComboBox" layoutX="480.0" layoutY="102.0" prefWidth="150.0" />
+      <Text layoutX="376.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Access Entry :" wrappingWidth="113.68011474609375" />
+      <TableView fx:id="informatioTableView" layoutX="44.0" layoutY="380.0" prefHeight="200.0" prefWidth="664.0">
         <columns>
-          <TableColumn prefWidth="128.00003051757812" text="Driver Name" />
-          <TableColumn prefWidth="170.39999389648438" text="License Plate" />
-            <TableColumn prefWidth="129.5999755859375" text="Entry Date" />
-            <TableColumn prefWidth="122.4000244140625" text="Time" />
-            <TableColumn prefWidth="114.40008544921875" text="Access Entry" />
+          <TableColumn fx:id="driverNameTableColumn" prefWidth="128.00003051757812" text="Driver Name" />
+          <TableColumn fx:id="licensePlateTableColumn" prefWidth="170.39999389648438" text="License Plate" />
+            <TableColumn fx:id="entryDateTableColumn" prefWidth="129.5999755859375" text="Entry Date" />
+            <TableColumn fx:id="timeTableColumn" prefWidth="122.4000244140625" text="Time" />
+            <TableColumn fx:id="accessEntryTableColumn" prefWidth="114.40008544921875" text="Access Entry" />
         </columns>
       </TableView>
-      <Button layoutX="32.0" layoutY="475.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="195.0" text="Show Informations" />
-      <Label layoutX="317.0" layoutY="472.0" prefHeight="118.0" prefWidth="370.0" text="Label" />
-      <Button layoutX="12.0" layoutY="14.0" mnemonicParsing="false" text="Back" />
+      <Button layoutX="12.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonOA" text="Back" />
+      <Button layoutX="218.0" layoutY="312.0" mnemonicParsing="false" onAction="#loadOnTableButtonOA" prefHeight="26.0" prefWidth="306.0" text="Load on table">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Label fx:id="messageLabel" layoutX="252.0" layoutY="17.0" prefHeight="18.0" prefWidth="352.0" text="Label" />
    </children>
 </AnchorPane>
