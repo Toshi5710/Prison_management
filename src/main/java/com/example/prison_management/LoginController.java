@@ -44,18 +44,18 @@ public class LoginController
         String password = PasswordTF.getText().trim();
 
         if (UserRole == null) {
-            Helper.showAlert("Please select a role.");
+            Helper.showErrorAlert("Please select a role.");
             return;
         }
 
         if (userID.isEmpty()) {
-            Helper.showAlert("Error", "Please enter your User ID.");
+            Helper.showInformationAlert("Error", "Please enter your User ID.");
             return;
         }
 
         // Check if Password is empty
         if (password.isEmpty()) {
-            Helper.showAlert("Error", "Please enter your Password.");
+            Helper.showInformationAlert("Error", "Please enter your Password.");
             return;
         }
 
@@ -181,7 +181,7 @@ public class LoginController
                 break;
         }
 
-        Helper.showAlert(
+        Helper.showInformationAlert(
                 "Login Failed",
                 "The User ID or Password does not match the selected role.\nPlease try again."
         );
