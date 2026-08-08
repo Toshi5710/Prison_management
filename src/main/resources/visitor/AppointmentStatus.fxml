@@ -7,19 +7,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.visitor.AppointmentStatusController">
+<AnchorPane prefHeight="515.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.visitor.AppointmentStatusController">
    <children>
       <Text layoutX="249.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Status" />
-      <TextField layoutX="56.0" layoutY="50.0" text="Appointment Token" />
-      <Button layoutX="417.0" layoutY="63.0" mnemonicParsing="false" text="Check Status" />
-      <TableView layoutX="31.0" layoutY="167.0" prefHeight="189.0" prefWidth="554.0">
+      <TextField fx:id="appointmentTokenTextField" layoutX="435.0" layoutY="133.0" text="Appointment Token" />
+      <Button layoutX="500.0" layoutY="79.0" mnemonicParsing="false" onAction="#checkStatusButtonOA" text="Check Status" />
+      <TableView fx:id="appointmentStatusTableView" layoutX="49.0" layoutY="283.0" prefHeight="189.0" prefWidth="554.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Token" />
-          <TableColumn prefWidth="75.0" text="Prisoner" />
-            <TableColumn prefWidth="75.0" text="Visit Date" />
-            <TableColumn prefWidth="75.0" text="Status" />
+          <TableColumn fx:id="tokenTableColumn" prefWidth="138.66665649414062" text="Token" />
+          <TableColumn fx:id="prisonerTableColumn" prefWidth="135.33331298828125" text="Prisoner" />
+            <TableColumn fx:id="visitDateTableColumn" prefWidth="126.0" text="Visit Date" />
+            <TableColumn fx:id="statusTableColumn" prefWidth="154.00006103515625" text="Status" />
         </columns>
       </TableView>
+      <TextField fx:id="tokenTextField" layoutX="184.0" layoutY="79.0" />
+      <TextField fx:id="prisonerTextField" layoutX="175.0" layoutY="121.0" />
+      <TextField fx:id="visitDateTextField" layoutX="175.0" layoutY="158.0" />
+      <TextField fx:id="statusTextField" layoutX="184.0" layoutY="200.0" />
+      <Text layoutX="107.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Token:" />
+      <Text layoutX="84.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prisoner:" />
+      <Text layoutX="84.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Visit Date:" />
+      <Text layoutX="107.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status:" />
    </children>
 </AnchorPane>

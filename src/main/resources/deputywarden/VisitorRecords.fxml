@@ -4,23 +4,33 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.deputywarden.VisitorRecordsController">
+<AnchorPane prefHeight="541.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.deputywarden.VisitorRecordsController">
    <children>
       <Text layoutX="244.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Visitor Records" />
-      <TableView layoutX="25.0" layoutY="58.0" prefHeight="195.0" prefWidth="539.0">
+      <TableView fx:id="visitorRecordsTableView" layoutX="46.0" layoutY="313.0" prefHeight="195.0" prefWidth="539.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Visitor ID" />
-          <TableColumn prefWidth="75.0" text="Visitor Name" />
-            <TableColumn prefWidth="75.0" text="Prisoner Name" />
-            <TableColumn prefWidth="75.0" text="Visit Date" />
-            <TableColumn prefWidth="75.0" text="Status" />
+          <TableColumn fx:id="visitorIdTableColumn" prefWidth="109.33331298828125" text="Visitor ID" />
+          <TableColumn fx:id="visitorNameTableColumn" prefWidth="128.66665649414062" text="Visitor Name" />
+            <TableColumn fx:id="prisonerNameTableColumn" prefWidth="110.66668701171875" text="Prisoner Name" />
+            <TableColumn fx:id="visitDateTableColumn" prefWidth="99.33331298828125" text="Visit Date" />
+            <TableColumn fx:id="statusTableColumn" prefWidth="90.6666259765625" text="Status" />
         </columns>
       </TableView>
-      <Button layoutX="297.0" layoutY="289.0" mnemonicParsing="false" text="Save comment" />
-      <TextArea layoutX="14.0" layoutY="272.0" prefHeight="81.0" prefWidth="129.0" text="Review Comments:" />
+      <Button layoutX="510.0" layoutY="258.0" mnemonicParsing="false" onAction="#saveCommentButtonOA" text="Save comment" />
+      <TextArea fx:id="reviewCommentsTextArea" layoutX="510.0" layoutY="166.0" prefHeight="81.0" prefWidth="129.0" text="Review Comments:" />
+      <TextField fx:id="visitorIdTextField" layoutX="135.0" layoutY="72.0" />
+      <TextField fx:id="visitorNameTextField" layoutX="143.0" layoutY="107.0" />
+      <TextField fx:id="prisonerNameTextField" layoutX="135.0" layoutY="154.0" />
+      <TextField fx:id="visitDateTextField" layoutX="143.0" layoutY="194.0" />
+      <TextField fx:id="statusTextField" layoutX="170.0" layoutY="246.0" />
+      <Text layoutX="60.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Visitor ID:" />
+      <Text layoutX="50.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Visitor Name:" />
+      <Text layoutX="49.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prisoner Name:" />
+      <Text layoutX="49.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Visit Date:" />
+      <Text layoutX="72.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status:" />
    </children>
 </AnchorPane>

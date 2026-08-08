@@ -5,12 +5,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.visitor.IdentityVerificationController">
    <children>
       <Text layoutX="264.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Identify Verification" />
-      <TextField layoutX="42.0" layoutY="58.0" text="Appointment Token :" />
-      <Button layoutX="58.0" layoutY="123.0" mnemonicParsing="false" text="Verify" />
-      <Button layoutX="414.0" layoutY="219.0" mnemonicParsing="false" text="Grant Entry" />
+      <TextField fx:id="appointmentTokenTextField" layoutX="42.0" layoutY="58.0" text="Appointment Token :" />
+      <Button layoutX="58.0" layoutY="123.0" mnemonicParsing="false" onAction="#verifyButtonOA" text="Verify" />
+      <Button layoutX="414.0" layoutY="219.0" mnemonicParsing="false" onAction="#grantEntryButtonOA" text="Grant Entry" />
    </children>
 </AnchorPane>

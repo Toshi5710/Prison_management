@@ -4,24 +4,34 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.deputywarden.TransferRequestController">
+<AnchorPane prefHeight="496.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.deputywarden.TransferRequestController">
    <children>
       <Text layoutX="212.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transfer Request " />
-      <TableView layoutX="18.0" layoutY="111.0" prefHeight="196.0" prefWidth="563.0">
+      <TableView fx:id="transferRequestTableView" layoutX="32.0" layoutY="234.0" prefHeight="196.0" prefWidth="563.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Request ID" />
-          <TableColumn prefWidth="75.0" text="Prisoner ID" />
-            <TableColumn prefWidth="75.0" text="Transfer TYpe" />
-            <TableColumn prefWidth="75.0" text="Reason" />
-            <TableColumn prefWidth="75.0" text="Status" />
+          <TableColumn fx:id="requestIdTableColumn" prefWidth="141.99996948242188" text="Request ID" />
+          <TableColumn fx:id="prisonerIdTableColumn" prefWidth="101.3333740234375" text="Prisoner ID" />
+            <TableColumn fx:id="transferTypeTableColumn" prefWidth="120.66665649414062" text="Transfer TYpe" />
+            <TableColumn fx:id="reasonTableColumn" prefWidth="78.00006103515625" text="Reason" />
+            <TableColumn fx:id="statusTableColumn" prefWidth="122.0" text="Status" />
         </columns>
       </TableView>
-      <Button layoutX="40.0" layoutY="332.0" mnemonicParsing="false" text="Submit Decision" />
-      <Button layoutX="350.0" layoutY="345.0" mnemonicParsing="false" text="Back" />
-      <CheckBox layoutX="40.0" layoutY="51.0" mnemonicParsing="false" text="Approve" />
+      <Button layoutX="23.0" layoutY="441.0" mnemonicParsing="false" onAction="#submitDecisionButtonOA" text="Submit Decision" />
+      <Button layoutX="430.0" layoutY="453.0" mnemonicParsing="false" onAction="#backButtonOA" text="Back" />
+      <CheckBox fx:id="approveCheckBox" layoutX="314.0" layoutY="205.0" mnemonicParsing="false" text="Approve" />
+      <TextField fx:id="requestIdTextField" layoutX="116.0" layoutY="43.0" />
+      <TextField fx:id="prisonerIdTextField" layoutX="125.0" layoutY="81.0" />
+      <TextField fx:id="transferTypeTextField" layoutX="125.0" layoutY="133.0" />
+      <TextField fx:id="reasonTextField" layoutX="464.0" layoutY="55.0" />
+      <TextField fx:id="statusTextField" layoutX="451.0" layoutY="94.0" />
+      <Text layoutX="42.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Request ID:" />
+      <Text layoutX="42.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prisoner Id:" />
+      <Text layoutX="53.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transfer Type:" />
+      <Text layoutX="394.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reason" />
+      <Text layoutX="394.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status:" />
    </children>
 </AnchorPane>

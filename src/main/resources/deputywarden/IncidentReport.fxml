@@ -8,15 +8,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.deputywarden.IncidentReportController">
    <children>
       <Text layoutX="267.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Incident Report" />
-      <TextField layoutX="60.0" layoutY="51.0" text="Incident ID" />
-      <DatePicker layoutX="48.0" layoutY="88.0" />
-      <ComboBox layoutX="39.0" layoutY="132.0" prefWidth="150.0" promptText="Incident Type" />
-      <TextArea layoutX="35.0" layoutY="169.0" prefHeight="200.0" prefWidth="200.0" text="Description:" />
-      <Button layoutX="404.0" layoutY="220.0" mnemonicParsing="false" text="Save" />
-      <Button layoutX="378.0" layoutY="344.0" mnemonicParsing="false" text="Generate Report" />
+      <TextField fx:id="incidentIdTextField" layoutX="60.0" layoutY="51.0" text="Incident ID" />
+      <DatePicker fx:id="datePicker" layoutX="48.0" layoutY="88.0" />
+      <ComboBox fx:id="incidentTypeComboBox" layoutX="39.0" layoutY="132.0" prefWidth="150.0" promptText="Incident Type" />
+      <TextArea fx:id="descriptionTextArea" layoutX="35.0" layoutY="169.0" prefHeight="200.0" prefWidth="200.0" text="Description:" />
+      <Button layoutX="404.0" layoutY="220.0" mnemonicParsing="false" onAction="#saveButtonOA" text="Save" />
+      <Button layoutX="378.0" layoutY="344.0" mnemonicParsing="false" onAction="#generateReportButtonOA" text="Generate Report" />
    </children>
 </AnchorPane>

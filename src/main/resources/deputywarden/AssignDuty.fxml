@@ -6,15 +6,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.deputywarden.AssignDutyController">
    <children>
       <Text layoutX="259.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assign Duty" />
-      <ComboBox layoutX="44.0" layoutY="51.0" prefWidth="150.0" promptText="Guard" />
-      <ComboBox layoutX="44.0" layoutY="85.0" prefWidth="150.0" promptText="Shift" />
-      <ComboBox layoutX="44.0" layoutY="131.0" prefWidth="150.0" promptText="Duty Area" />
-      <DatePicker layoutX="37.0" layoutY="179.0" />
-      <Button layoutX="73.0" layoutY="237.0" mnemonicParsing="false" text="Assign" />
-      <Button layoutX="248.0" layoutY="237.0" mnemonicParsing="false" text="Clear" />
+      <ComboBox fx:id="guardComboBox" layoutX="44.0" layoutY="51.0" prefWidth="150.0" promptText="Guard" />
+      <ComboBox fx:id="shiftComboBox" layoutX="44.0" layoutY="85.0" prefWidth="150.0" promptText="Shift" />
+      <ComboBox fx:id="dutyAreaComboBox" layoutX="44.0" layoutY="131.0" prefWidth="150.0" promptText="Duty Area" />
+      <DatePicker fx:id="datePicker" layoutX="37.0" layoutY="179.0" />
+      <Button layoutX="73.0" layoutY="237.0" mnemonicParsing="false" onAction="#assignButtonOA" text="Assign" />
+      <Button layoutX="248.0" layoutY="237.0" mnemonicParsing="false" onAction="#clearButtonOA" text="Clear" />
    </children>
 </AnchorPane>

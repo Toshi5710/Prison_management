@@ -6,13 +6,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.deputywarden.StaffRecruitmentController">
    <children>
       <Text layoutX="254.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Staff Recruitment" />
-      <TextField layoutX="59.0" layoutY="41.0" text="Candidate ID" />
-      <ComboBox layoutX="59.0" layoutY="85.0" prefWidth="150.0" promptText="Security Clearance" />
-      <Button layoutX="82.0" layoutY="188.0" mnemonicParsing="false" text="Approve" />
-      <Button layoutX="320.0" layoutY="188.0" mnemonicParsing="false" text="Reject" />
+      <TextField fx:id="candidateIdTextField" layoutX="59.0" layoutY="41.0" text="Candidate ID" />
+      <ComboBox fx:id="securityClearanceComboBox" layoutX="59.0" layoutY="85.0" prefWidth="150.0" promptText="Security Clearance" />
+      <Button layoutX="82.0" layoutY="188.0" mnemonicParsing="false" onAction="#approveButtonOA" text="Approve" />
+      <Button layoutX="320.0" layoutY="188.0" mnemonicParsing="false" onAction="#rejectButtonOA" text="Reject" />
    </children>
 </AnchorPane>
