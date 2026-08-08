@@ -6,19 +6,32 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.PrisonWarden.PendingFundingAllocationsController">
    <children>
       <Text layoutX="234.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pending Funding Allocations" />
-      <Text layoutX="68.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Proposal ID :" />
-      <TableView fx:id="PendingFundingAllocationsTV" layoutX="101.0" layoutY="54.0" prefHeight="153.0" prefWidth="398.0">
+      <Text layoutX="67.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Proposal ID :" />
+      <TableView fx:id="PendingFundingAllocationsTV" layoutX="14.0" layoutY="76.0" prefHeight="160.0" prefWidth="571.0">
         <columns>
-          <TableColumn fx:id="PendingProposalIDTC" prefWidth="397.6000122070312" text="Pending Proposal ID" />
+          <TableColumn fx:id="PendingProposalIDTC" prefWidth="77.59997367858887" text="Proposal ID" />
+            <TableColumn fx:id="NarrativeTC" prefWidth="230.40003204345703" text="Narrative" />
+            <TableColumn fx:id="AmountTC" prefWidth="88.79998779296875" text="Amount" />
+            <TableColumn fx:id="FiscalYearTc" minWidth="0.0" prefWidth="99.99996948242188" text="Fiscal Year" />
+            <TableColumn fx:id="StatusTC" minWidth="0.0" prefWidth="71.20001220703125" text="Status" />
         </columns>
       </TableView>
-      <TextField fx:id="ProposalIDTF" layoutX="150.0" layoutY="238.0" />
-      <ComboBox fx:id="DecisionComboBox" layoutX="403.0" layoutY="237.0" prefHeight="26.0" prefWidth="124.0" promptText="Decision" />
-      <Button layoutX="255.0" layoutY="324.0" mnemonicParsing="false" onAction="#SubmitDecisionOA" prefHeight="34.0" prefWidth="102.0" text="Submit Decision" />
+      <TextField fx:id="ProposalIDTF" layoutX="149.0" layoutY="272.0" />
+      <ComboBox fx:id="DecisionComboBox" layoutX="401.0" layoutY="271.0" prefHeight="26.0" prefWidth="124.0" promptText="Decision" />
+      <Button layoutX="254.0" layoutY="323.0" mnemonicParsing="false" onAction="#SubmitDecisionOA" prefHeight="34.0" prefWidth="111.0" text="Submit Decision">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="24.0" layoutY="28.0" mnemonicParsing="false" onAction="#BackOA" text="Back">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
