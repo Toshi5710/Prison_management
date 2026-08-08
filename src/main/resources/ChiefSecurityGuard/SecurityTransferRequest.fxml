@@ -2,21 +2,26 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.ChiefSecurityGuard.SecurityTransferController">
+<AnchorPane fx:id="statusTextField" prefHeight="471.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.ChiefSecurityGuard.SecurityTransferController">
    <children>
       <Text layoutX="65.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prisoner ID :" wrappingWidth="113.33673095703125" />
       <TextField fx:id="prisonerIDTextField" layoutX="188.0" layoutY="79.0" />
       <Text layoutX="65.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Destination Block :" wrappingWidth="113.33673095703125" />
-      <TextField fx:id="destinationBlockTextField" layoutX="188.0" layoutY="118.0" />
-      <Text layoutX="65.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reason :" wrappingWidth="113.33673095703125" />
-      <TextField fx:id="reasonTextField" layoutX="188.0" layoutY="159.0" />
-      <Text layoutX="400.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Threat level :" wrappingWidth="113.33673095703125" />
-      <ComboBox fx:id="threatLevelComboBox" layoutX="537.0" layoutY="79.0" prefWidth="150.0" />
+      <Text layoutX="400.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reason :" wrappingWidth="113.33673095703125" />
+      <ComboBox fx:id="reasonComboBox" layoutX="479.0" layoutY="79.0" prefWidth="150.0" />
       <Button layoutX="255.0" layoutY="231.0" mnemonicParsing="false" onAction="#saveButtonOA" prefHeight="26.0" prefWidth="191.0" text="Save" />
       <Button layoutX="28.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonOA" prefHeight="26.0" prefWidth="70.0" text="Back" />
+      <ComboBox fx:id="destinationBlockComboBox" layoutX="187.0" layoutY="118.0" prefWidth="150.0" />
+      <Label fx:id="showInfoLabel" alignment="CENTER" layoutX="97.0" layoutY="281.0" prefHeight="157.0" prefWidth="532.0" textFill="#d11c1c">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
