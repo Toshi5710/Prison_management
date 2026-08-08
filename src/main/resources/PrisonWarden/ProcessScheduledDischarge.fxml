@@ -5,6 +5,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.PrisonWarden.ProcessScheduledDischargeController">
@@ -12,13 +13,24 @@
       <Text layoutX="223.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Process Scheduled Discharge" />
       <Text layoutX="54.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input target Prisoner ID :" />
       <TextField fx:id="InputTargetPrisonerIDTF" layoutX="193.0" layoutY="66.0" />
-      <Button layoutX="401.0" layoutY="66.0" mnemonicParsing="false" onAction="#SearchAndLoadOA" text="Search &amp; Load " />
+      <Button layoutX="401.0" layoutY="66.0" mnemonicParsing="false" onAction="#SearchAndLoadOA" text="Search &amp; Load ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
       <TableView fx:id="ProcessScheduledDischargeTV" layoutX="93.0" layoutY="125.0" prefHeight="88.0" prefWidth="368.0">
         <columns>
           <TableColumn fx:id="PrisonerNameTC" prefWidth="184.79998779296875" text="Prisoner Name" />
           <TableColumn fx:id="RemainingDaysTC" prefWidth="184.800048828125" text="Remaining days" />
         </columns>
       </TableView>
-      <Button layoutX="254.0" layoutY="268.0" mnemonicParsing="false" onAction="#DeleteRecordOA" text="Delete Record" />
+      <Button layoutX="254.0" layoutY="268.0" mnemonicParsing="false" onAction="#DeleteRecordOA" text="Delete Record">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="24.0" layoutY="28.0" mnemonicParsing="false" onAction="#BackOA" text="Back">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
