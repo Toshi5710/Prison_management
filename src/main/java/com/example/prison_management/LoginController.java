@@ -73,8 +73,8 @@ public class LoginController
 
                     SceneSwitcher.switchScene(
                             actionEvent,
-                            "/MedicalDoctor/MedicalDashboard.fxml",
-                            "Medical Dashboard"
+                            "/PrisonWarden/PrisonWardenDashBoard.fxml",
+                            "Prison Warden Dashboard"
                     );
                     return;
                 }
@@ -172,8 +172,8 @@ public class LoginController
 
                     SceneSwitcher.switchScene(
                             actionEvent,
-                            "/MedicalAssistant/MedicalAssistantDashboard.fxml",
-                            "Medical Assistant Dashboard"
+                            "/Prisoner/PrisonerDashBoard.fxml",
+                            "Prisoner Dashboard"
                     );
 
                     return;

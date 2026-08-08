@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.PrisonWarden.PolicyManagementController">
    <children>
       <Text layoutX="251.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Policy Management" />
-      <Button layoutX="262.0" layoutY="296.0" mnemonicParsing="false" onAction="#UpdatePolicyOA" text="Update Policy" />
-      <TextField fx:id="EditThePolicyDescriptionTF" layoutX="66.0" layoutY="124.0" prefHeight="114.0" prefWidth="464.0" />
-      <Text layoutX="66.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit the policy description Text :" />
+      <Button layoutX="256.0" layoutY="349.0" mnemonicParsing="false" onAction="#UpdatePolicyOA" text="Update Policy">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <TextField fx:id="EditThePolicyDescriptionTF" layoutX="68.0" layoutY="258.0" prefHeight="78.0" prefWidth="464.0" />
+      <Text layoutX="68.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit the policy description Text :" />
+      <Button layoutX="24.0" layoutY="28.0" mnemonicParsing="false" onAction="#BackOA" text="Back">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="PolicyIDComboBox" layoutX="149.0" layoutY="54.0" prefWidth="150.0" promptText="PolicyID" />
+      <Label fx:id="CurrentpolicyLabel" layoutX="68.0" layoutY="129.0" prefHeight="70.0" prefWidth="464.0" text="Current policy :" />
+      <Button layoutX="403.0" layoutY="54.0" mnemonicParsing="false" onAction="#ShowcurrentPolicyOA" text="Show current Policy">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
