@@ -2,14 +2,35 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.ChiefSecurityGuard.SecuritySurveillanceController">
+<AnchorPane prefHeight="667.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.ChiefSecurityGuard.SecuritySurveillanceController">
    <children>
-      <ComboBox fx:id="securotyCameraButtonOA" layoutX="227.0" layoutY="95.0" prefWidth="150.0" />
-      <Text layoutX="93.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Security Cameras :" wrappingWidth="156.53677368164062" />
-      <Button layoutX="244.0" layoutY="200.0" mnemonicParsing="false" onAction="#goThisLocationButtonOA" prefHeight="48.0" prefWidth="111.0" text="Go this location" />
-      <Button layoutX="31.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonOA" text="Back" />
+      <ComboBox fx:id="securityCameraComboBox" layoutX="165.0" layoutY="475.0" prefWidth="150.0" />
+      <Text layoutX="31.0" layoutY="492.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Security Cameras  :" wrappingWidth="156.53677368164062" />
+      <Button layoutX="349.0" layoutY="603.0" mnemonicParsing="false" onAction="#checkButtonOA" prefHeight="42.0" prefWidth="142.0" text="Check" />
+      <Button layoutX="31.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonOA" prefHeight="26.0" prefWidth="60.0" text="Back" />
+      <ComboBox fx:id="cameraLocationComboBox" layoutX="165.0" layoutY="523.0" prefWidth="150.0" />
+      <Text layoutX="31.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Camera location  :" wrappingWidth="156.53677368164062" />
+      <ComboBox fx:id="cameraStatusComboBox" layoutX="611.0" layoutY="522.0" prefWidth="150.0" />
+      <Text layoutX="491.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Cameras Status  :" wrappingWidth="156.53677368164062" />
+      <TableView fx:id="cameraTableView" layoutX="31.0" layoutY="156.0" prefHeight="256.0" prefWidth="755.0">
+        <columns>
+          <TableColumn fx:id="securityCameraTableColumn" prefWidth="253.60001754760742" text="Security Camera " />
+          <TableColumn fx:id="cameraLocationTableColumn" prefWidth="250.39996337890625" text="Camera Location" />
+            <TableColumn fx:id="cameraStatusTableColumn" prefWidth="243.2000732421875" text="Camera Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="315.0" layoutY="110.0" mnemonicParsing="false" onAction="#showAllInfoButtonOA" prefHeight="35.0" prefWidth="158.0" text="Show all info" />
+      <Label fx:id="showUpdateLabel" alignment="CENTER" layoutX="255.0" layoutY="14.0" prefHeight="72.0" prefWidth="590.0" textFill="#dc0606">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

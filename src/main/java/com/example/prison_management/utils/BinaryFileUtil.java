@@ -86,7 +86,7 @@ public class BinaryFileUtil {
     }
 
     // Custom ObjectOutputStream to avoid writing header while appending
-    private static class AppendableObjectOutputStream extends ObjectOutputStream {
+    public static class AppendableObjectOutputStream extends ObjectOutputStream {
 
         public AppendableObjectOutputStream(OutputStream out) throws IOException {
             super(out);

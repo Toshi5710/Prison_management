@@ -1,6 +1,6 @@
 package com.example.prison_management;
 
-public class User {
+public abstract class User {
     private String UserID;
     private String Password;
     private String UserRole;
