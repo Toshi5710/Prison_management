@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.MedicalDoctor.MedicalDoctorController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.MedicalDoctor.MedicalDoctorDashboardController">
    <children>
       <Button layoutX="71.0" layoutY="63.0" mnemonicParsing="false" onAction="#examinePrisonerButtonOA" prefHeight="26.0" prefWidth="142.0" text=" Prisoner Examination">
          <font>

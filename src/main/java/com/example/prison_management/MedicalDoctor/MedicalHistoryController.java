@@ -1,5 +1,6 @@
 package com.example.prison_management.MedicalDoctor;
 
+import com.example.prison_management.utils.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextField;
@@ -25,5 +26,6 @@ public class MedicalHistoryController
 
     @javafx.fxml.FXML
     public void backButtonOA(ActionEvent actionEvent) {
+        SceneSwitcher.switchScene(actionEvent,"/MedicalDoctor/MedicalDashboard.fxml","DashBoard");
     }
 }

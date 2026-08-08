@@ -5,21 +5,35 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="522.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.ChiefSecurityGuard.ShiftLeaveRequestsController">
+<AnchorPane fx:id="me" prefHeight="522.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.ChiefSecurityGuard.ShiftLeaveRequestsController">
    <children>
-      <Button fx:id="backButtonOA" layoutX="32.0" layoutY="27.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="61.0" text="Back" />
-      <TableView layoutX="45.0" layoutY="94.0" prefHeight="200.0" prefWidth="491.0">
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonOA" prefHeight="26.0" prefWidth="84.0" text="Back" />
+      <TableView fx:id="showAllRequestsTableView" layoutX="45.0" layoutY="94.0" prefHeight="200.0" prefWidth="491.0">
         <columns>
-          <TableColumn fx:id="officerNameTableColumn" prefWidth="142.4000244140625" text="Officer Name" />
+          <TableColumn fx:id="requestIDTableColumn" prefWidth="142.4000244140625" text="Request ID" />
           <TableColumn fx:id="officerIDTableColumn" prefWidth="107.20001220703125" text="Officer ID" />
             <TableColumn fx:id="reasonTableColumn" prefWidth="115.199951171875" text="Reason" />
             <TableColumn fx:id="statusTableColumn" prefWidth="126.4000244140625" text="Status" />
         </columns>
       </TableView>
-      <Button layoutX="61.0" layoutY="305.0" mnemonicParsing="false" onAction="#approveLeaveButtonOA" prefHeight="26.0" prefWidth="122.0" text="Approve Leave" />
-      <Button layoutX="413.0" layoutY="305.0" mnemonicParsing="false" onAction="#denyLeaveButtonOA" prefHeight="26.0" prefWidth="122.0" text="Deny Leave" />
-      <Label fx:id="showResultsLabel" layoutX="61.0" layoutY="413.0" prefHeight="92.0" prefWidth="506.0" text="Label" />
-      <Button layoutX="68.0" layoutY="375.0" mnemonicParsing="false" onAction="#showAllRequestResultsButtonOA" text="Show all request results " />
+      <Button layoutX="61.0" layoutY="305.0" mnemonicParsing="false" onAction="#approveLeaveButtonOA" prefHeight="26.0" prefWidth="122.0" text="Approve Leave">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="413.0" layoutY="305.0" mnemonicParsing="false" onAction="#denyLeaveButtonOA" prefHeight="26.0" prefWidth="122.0" text="Deny Leave">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="218.0" layoutY="53.0" mnemonicParsing="false" onAction="#showAllRequestResultsButtonOA" text="Show all request results ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Label fx:id="showMessageLabel" alignment="CENTER" layoutX="81.0" layoutY="416.0" prefHeight="82.0" prefWidth="442.0" textFill="#c41313">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
