@@ -19,5 +19,8 @@ module com.example.prison_management {
     opens com.example.prison_management.dummy to javafx.fxml;
     exports com.example.prison_management.dummy;
 
+    opens com.example.prison_management.Prisoner to javafx.base;
+    exports com.example.prison_management.Prisoner;
+
 
 }

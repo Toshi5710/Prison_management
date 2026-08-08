@@ -22,6 +22,7 @@ public class ChiefSecurityGuardDashboardController
 
     @javafx.fxml.FXML
     public void threatLevelButtonOA(ActionEvent actionEvent) {
+        SceneSwitcher.switchScene(actionEvent,"/ChiefSecurityGuard/ThreatLevelManagement.fxml","Threat Level");
     }
 
     @javafx.fxml.FXML
