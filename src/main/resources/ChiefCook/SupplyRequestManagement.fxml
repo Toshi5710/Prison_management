@@ -8,20 +8,20 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.ChiefCook.SupplyRequestManagementViewController">
    <children>
-      <ComboBox layoutX="110.0" layoutY="43.0" prefWidth="150.0" promptText="Item to Request" />
-      <TextField layoutX="425.0" layoutY="30.0" />
-      <TableView layoutX="24.0" layoutY="114.0" prefHeight="200.0" prefWidth="281.0">
+      <ComboBox fx:id="ItemtoRequestCB" layoutX="110.0" layoutY="43.0" prefWidth="150.0" promptText="Item to Request" />
+      <TextField fx:id="RequiredQuantityTF" layoutX="425.0" layoutY="30.0" />
+      <TableView fx:id="SupplyRequestManagementTV" layoutX="24.0" layoutY="114.0" prefHeight="200.0" prefWidth="281.0">
         <columns>
-          <TableColumn prefWidth="152.0" text=" Low Stock Items" />
-          <TableColumn prefWidth="126.4000244140625" text="Suggested Quantities" />
+          <TableColumn fx:id="lowStockItemsTC" prefWidth="152.0" text=" Low Stock Items" />
+          <TableColumn fx:id="SuggestedQuantitiesTC" prefWidth="126.4000244140625" text="Suggested Quantities" />
         </columns>
       </TableView>
-      <Button layoutX="385.0" layoutY="136.0" mnemonicParsing="false" text="Review Current Inventory" />
-      <Button layoutX="385.0" layoutY="174.0" mnemonicParsing="false" text="Submit Supply Request" />
-      <Label layoutX="411.0" layoutY="272.0" text="Request Confirmation" />
-      <Label layoutX="326.0" layoutY="34.0" text="Item to Request" />
+      <Button layoutX="415.0" layoutY="136.0" mnemonicParsing="false" onAction="#ReviewCurrentInventoryButtonOA" text="Review Current Inventory" />
+      <Button layoutX="415.0" layoutY="174.0" mnemonicParsing="false" onAction="#SubmitSupplyRequestButtonOA" text="Submit Supply Request" />
+      <Label fx:id="RequestConfirmationLabel" layoutX="411.0" layoutY="272.0" text="Request Confirmation" />
+      <Label layoutX="326.0" layoutY="34.0" text="Required Quantity" />
+      <Button layoutX="24.0" layoutY="22.0" mnemonicParsing="false" onAction="#BackButtonOA" text="Back" />
    </children>
 </AnchorPane>

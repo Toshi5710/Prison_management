@@ -9,23 +9,24 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.ChiefCook.MealScheduleManagementViewController">
+<AnchorPane prefHeight="350.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.ChiefCook.MealScheduleManagementViewController">
    <children>
-      <DatePicker layoutX="92.0" layoutY="94.0" />
-      <ComboBox layoutX="105.0" layoutY="148.0" prefWidth="150.0" promptText="Meal Type" />
-      <TextField layoutX="367.0" layoutY="14.0" text="Menu Items" />
-      <TableView layoutX="264.0" layoutY="61.0" prefHeight="200.0" prefWidth="320.0">
+      <DatePicker fx:id="ScheduleDateDP" layoutX="92.0" layoutY="94.0" />
+      <ComboBox fx:id="MealTypeCB" layoutX="105.0" layoutY="148.0" prefWidth="150.0" promptText="Meal Type" />
+      <TextField fx:id="MenuItemsTF" layoutX="367.0" layoutY="14.0" text=" " />
+      <TableView fx:id="MealScheduleManagementTV" layoutX="264.0" layoutY="61.0" prefHeight="200.0" prefWidth="320.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Date" />
-          <TableColumn prefWidth="75.0" text="Meal Type" />
-            <TableColumn prefWidth="75.0" text="Menu" />
-            <TableColumn prefWidth="93.5999755859375" text="Serving Count" />
+          <TableColumn fx:id="DateTC" prefWidth="75.0" text="Date" />
+          <TableColumn fx:id="MealTypeTC" prefWidth="75.0" text="Meal Type" />
+            <TableColumn fx:id="MenuTC" prefWidth="75.0" text="Menu" />
+            <TableColumn fx:id="ServingCountTC" prefWidth="93.5999755859375" text="Serving Count" />
         </columns>
       </TableView>
-      <Button layoutX="390.0" layoutY="279.0" mnemonicParsing="false" text="Fetch Prisoner Requirements" />
-      <Button layoutX="398.0" layoutY="319.0" mnemonicParsing="false" text="Save Daily Schedule" />
-      <Label layoutX="151.0" layoutY="336.0" text="Schedule Saved Notification" />
+      <Button layoutX="415.0" layoutY="279.0" mnemonicParsing="false" onAction="#FetchPrisonerRequirementsButtonOA" text="Fetch Prisoner Requirements" />
+      <Button layoutX="415.0" layoutY="319.0" mnemonicParsing="false" onAction="#SaveDailyScheduleButtonOA" text="Save Daily Schedule" />
+      <Label fx:id="ScheduleSavedNotificationLabel" layoutX="151.0" layoutY="336.0" text="Schedule Saved Notification" />
       <Label layoutX="14.0" layoutY="98.0" text="Schedule Date" />
+      <Label layoutX="290.0" layoutY="18.0" text="Menu Items" />
+      <Button layoutX="27.0" layoutY="27.0" mnemonicParsing="false" onAction="#BackButtonOA" text="Back" />
    </children>
 </AnchorPane>

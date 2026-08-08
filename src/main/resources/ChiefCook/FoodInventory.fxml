@@ -2,16 +2,16 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.ChiefCook.FoodInventoryViewController">
    <children>
       <ComboBox fx:id="FoodItemIDCB" layoutX="51.0" layoutY="49.0" prefWidth="150.0" promptText="Food Item ID" />
-      <TextField layoutX="58.0" layoutY="106.0" prefHeight="26.0" prefWidth="190.0" text="Stock Quantity to Add/Remove" />
+      <TextField layoutX="189.0" layoutY="105.0" onAction="#StockQuantitytoAddOrRemoveTF" prefHeight="26.0" prefWidth="190.0" text=" " />
       <TableView fx:id="FoodInventoryTV" layoutX="51.0" layoutY="162.0" prefHeight="200.0" prefWidth="444.0">
         <columns>
           <TableColumn fx:id="ItemIDTC" prefWidth="75.0" text="Item ID" />
@@ -20,7 +20,10 @@
             <TableColumn fx:id="MinimumRequiredStockTC" prefWidth="170.39996337890625" text="Minimum Required Stock" />
         </columns>
       </TableView>
-      <Button layoutX="471.0" layoutY="36.0" mnemonicParsing="false" onAction="#FetchFoodStockButtonOA" text="Fetch Food Stock" />
-      <Button layoutX="471.0" layoutY="106.0" mnemonicParsing="false" onAction="#UpdateInventoryButtonOA" text="Update Inventory" />
+      <Button layoutX="415.0" layoutY="36.0" mnemonicParsing="false" onAction="#FetchFoodStockButtonOA" text="Fetch Food Stock" />
+      <Button layoutX="415.0" layoutY="106.0" mnemonicParsing="false" onAction="#UpdateInventoryButtonOA" text="Update Inventory" />
+      <Label layoutX="14.0" layoutY="110.0" text="Stock Quantity to Add/Remove" />
+      <Label fx:id="InventoryStatusupdateLabel" layoutX="237.0" layoutY="375.0" text="Inventory Status update" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackButtonOA" text="Back" />
    </children>
 </AnchorPane>

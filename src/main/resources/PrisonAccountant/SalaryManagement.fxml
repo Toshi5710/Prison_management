@@ -7,23 +7,23 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.PrisonAccountant.SalaryManagementViewController">
+<AnchorPane fx:id="StatusTC" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.PrisonAccountant.SalaryManagementViewController">
    <children>
-      <TextField layoutX="404.0" layoutY="24.0" />
-      <TableView layoutX="14.0" layoutY="100.0" prefHeight="200.0" prefWidth="390.0">
+      <TextField fx:id="EmployeeIDTF" layoutX="404.0" layoutY="24.0" />
+      <TableView fx:id="SalaryManagementTV" layoutX="14.0" layoutY="100.0" prefHeight="200.0" prefWidth="390.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Employee ID" />
-          <TableColumn prefWidth="75.0" text="Name" />
-            <TableColumn prefWidth="75.0" text="Role" />
-            <TableColumn prefWidth="75.0" text="Base Salary" />
-            <TableColumn prefWidth="88.80002441406248" text=" Status" />
+          <TableColumn fx:id="EmployeeIDTC" prefWidth="92.80004692077637" text="Employee ID" />
+          <TableColumn fx:id="NameTC" prefWidth="57.59992218017578" text="Name" />
+            <TableColumn fx:id="RoleTC" prefWidth="75.0" text="Role" />
+            <TableColumn fx:id="BaseSalaryTC" prefWidth="75.0" text="Base Salary" />
+            <TableColumn fx:id="statusTC" prefWidth="88.80002441406248" text=" Status" />
         </columns>
       </TableView>
-      <Button layoutX="476.0" layoutY="236.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" text="Fetch Payroll" />
-      <Button layoutX="500.0" layoutY="283.0" mnemonicParsing="false" text="Verify Details" />
-      <Label layoutX="91.0" layoutY="344.0" text="Confirmation message, e.g., &quot;Salary Processed Successfully&quot;" />
+      <Button layoutX="415.0" layoutY="236.0" mnemonicParsing="false" onAction="#FetchPayrollButtonOA" prefHeight="26.0" prefWidth="100.0" text="Fetch Payroll" />
+      <Button layoutX="415.0" layoutY="283.0" mnemonicParsing="false" onAction="#VerifyDetailsButtonOA" text="Verify Details" />
+      <Label fx:id="ConfirmationmessageLabel" layoutX="91.0" layoutY="344.0" text="Confirmation message, e.g., &quot;Salary Processed Successfully&quot;" />
       <Label layoutX="333.0" layoutY="28.0" text="Employee ID" />
-      <Button layoutX="473.0" layoutY="327.0" mnemonicParsing="false" text="Process Payment" />
+      <Button layoutX="473.0" layoutY="327.0" mnemonicParsing="false" onAction="#ProcessPaymentButtonOA" text="Process Payment" />
+      <Button layoutX="14.0" layoutY="16.0" mnemonicParsing="false" onAction="#BackButtonOA" text="Back" />
    </children>
 </AnchorPane>

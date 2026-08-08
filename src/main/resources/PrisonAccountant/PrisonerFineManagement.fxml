@@ -7,21 +7,24 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.PrisonAccountant.PrisonerFineManagementViewController">
    <children>
-      <TextField layoutX="414.0" layoutY="77.0" />
-      <TextField layoutX="407.0" layoutY="25.0" />
-      <TableView layoutX="14.0" layoutY="67.0" prefHeight="200.0" prefWidth="200.0">
+      <TextField fx:id="PaymentAmountTF" layoutX="554.0" layoutY="59.0" />
+      <TextField fx:id="SearchFineTF" layoutX="554.0" layoutY="16.0" />
+      <TableView fx:id="PrisonerFineManagementTV" layoutX="14.0" layoutY="200.0" prefHeight="200.0" prefWidth="458.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="FineIDTC" prefWidth="75.0" text="Fine ID" />
+          <TableColumn fx:id="PrisonerIDTC" prefWidth="75.0" text="Prisoner ID" />
+            <TableColumn fx:id="TotalFineTC" prefWidth="107.20001220703125" text="Total Fine" />
+            <TableColumn fx:id="OutstandingBalanceTC" prefWidth="136.0" text="Outstanding Balance" />
+            <TableColumn fx:id="StatusTC" prefWidth="64.0" text="Status" />
         </columns>
       </TableView>
-      <Button layoutX="470.0" layoutY="209.0" mnemonicParsing="false" text="Fetch Fine Details" />
-      <Button layoutX="439.0" layoutY="254.0" mnemonicParsing="false" text="Update Payment Status" />
-      <Label layoutX="240.0" layoutY="328.0" text="Updated balance display" />
-      <Label layoutX="333.0" layoutY="29.0" text="Search Fine" />
-      <Label layoutX="305.0" layoutY="81.0" text="Payment Amount" />
+      <Button layoutX="415.0" layoutY="129.0" mnemonicParsing="false" onAction="#FetchFineDetailsButtonOA" text="Fetch Fine Details" />
+      <Button layoutX="415.0" layoutY="174.0" mnemonicParsing="false" onAction="#UpdatePaymentStatusButtonOA" text="Update Payment Status" />
+      <Label fx:id="UpdatedbalancedisplayLabel" layoutX="536.0" layoutY="347.0" text="Updated balance display" />
+      <Label layoutX="470.0" layoutY="20.0" text="Search Fine" />
+      <Label layoutX="439.0" layoutY="63.0" text="Payment Amount" />
+      <Button layoutX="21.0" layoutY="16.0" mnemonicParsing="false" onAction="#BackButtonOA" text="Back" />
    </children>
 </AnchorPane>

@@ -7,17 +7,17 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="460.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.PrisonAccountant.FinancialReportsViewController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.PrisonAccountant.FinancialReportsViewController">
    <children>
-      <ComboBox layoutX="59.0" layoutY="43.0" prefWidth="150.0" promptText="Report Type" />
-      <DatePicker layoutX="344.0" layoutY="43.0" />
-      <DatePicker layoutX="344.0" layoutY="99.0" />
-      <TextArea layoutX="34.0" layoutY="149.0" prefHeight="200.0" prefWidth="200.0" />
-      <Button layoutX="335.0" layoutY="236.0" mnemonicParsing="false" text="Generate Report" />
-      <Button layoutX="351.0" layoutY="185.0" mnemonicParsing="false" text="Fetch Data" />
-      <Label layoutX="188.0" layoutY="386.0" text="Report generation status" />
+      <ComboBox fx:id="ReportTypeCB" layoutX="59.0" layoutY="43.0" prefWidth="150.0" promptText="Report Type" />
+      <DatePicker fx:id="StartDateDP" layoutX="344.0" layoutY="43.0" />
+      <DatePicker fx:id="EndDateDP" layoutX="344.0" layoutY="99.0" />
+      <TextArea fx:id="FinancialReportTA" layoutX="34.0" layoutY="149.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button layoutX="415.0" layoutY="236.0" mnemonicParsing="false" onAction="#GenerateReportButtonOA" text="Generate Report" />
+      <Button layoutX="415.0" layoutY="185.0" mnemonicParsing="false" onAction="#FetchDataButtonOA" text="Fetch Data" />
+      <Label fx:id="ReportgenerationstatusLabel" layoutX="188.0" layoutY="386.0" text="Report generation status" />
       <Label layoutX="286.0" layoutY="47.0" text="Start Date" />
       <Label layoutX="286.0" layoutY="103.0" text="End Date" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackButtonOA" text="Back" />
    </children>
 </AnchorPane>

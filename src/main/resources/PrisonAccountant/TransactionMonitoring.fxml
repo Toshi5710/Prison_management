@@ -7,20 +7,20 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.PrisonAccountant.TransactionMonitoringViewController">
    <children>
-      <ComboBox layoutX="96.0" layoutY="43.0" prefWidth="150.0" promptText="Filter by Account" />
-      <TableView layoutX="18.0" layoutY="130.0" prefHeight="200.0" prefWidth="358.0">
+      <ComboBox fx:id="FilterbyAccountCB" layoutX="96.0" layoutY="43.0" prefWidth="150.0" promptText="Filter by Account" />
+      <TableView fx:id="TransactionMonitoringTV" layoutX="18.0" layoutY="130.0" prefHeight="200.0" prefWidth="358.0">
         <columns>
-          <TableColumn prefWidth="90.4000244140625" text="Transaction ID" />
-          <TableColumn prefWidth="94.4000244140625" text="Account" />
-            <TableColumn prefWidth="94.4000244140625" text="Amount" />
-            <TableColumn prefWidth="94.4000244140625" text="Status" />
+          <TableColumn fx:id="TransactionIDTC" prefWidth="90.4000244140625" text="Transaction ID" />
+          <TableColumn fx:id="AccountTC" prefWidth="94.4000244140625" text="Account" />
+            <TableColumn fx:id="AmountTC" prefWidth="94.4000244140625" text="Amount" />
+            <TableColumn fx:id="StatusTC" prefWidth="94.4000244140625" text="Status" />
         </columns>
       </TableView>
-      <Button layoutX="470.0" layoutY="166.0" mnemonicParsing="false" text="Fetch Transactions" />
-      <Button layoutX="446.0" layoutY="217.0" mnemonicParsing="false" text="Verify &amp; Update Status" />
-      <Label layoutX="289.0" layoutY="355.0" text="Transaction Summary" />
+      <Button layoutX="415.0" layoutY="166.0" mnemonicParsing="false" onAction="#FetchTransactionsButtonOA" text="Fetch Transactions" />
+      <Button layoutX="415.0" layoutY="217.0" mnemonicParsing="false" onAction="#VerifyAndUpdateStatusButtonOA" text="Verify &amp; Update Status" />
+      <Label fx:id="TransactionSummaryLabel" layoutX="289.0" layoutY="355.0" text="Transaction Summary" />
+      <Button layoutX="18.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackButtonOA" text="Back" />
    </children>
 </AnchorPane>

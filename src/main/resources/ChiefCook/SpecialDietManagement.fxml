@@ -8,22 +8,22 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.ChiefCook.SpecialDietManagementViewController">
    <children>
-      <TextField layoutX="95.0" layoutY="33.0" />
-      <TextArea layoutX="23.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" />
-      <TableView layoutX="271.0" layoutY="33.0" prefHeight="200.0" prefWidth="312.0">
+      <TextField fx:id="PrisonerIDTF" layoutX="95.0" layoutY="33.0" />
+      <TextArea fx:id="SpeacialDietManagementTA" layoutX="23.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" />
+      <TableView fx:id="SpeacialDietManagementTV" layoutX="271.0" layoutY="33.0" prefHeight="200.0" prefWidth="312.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Prisoner ID" />
-          <TableColumn prefWidth="156.00006103515625" text="Medical Recommendation" />
-            <TableColumn minWidth="0.0" prefWidth="80.79998779296875" text="Diet Plan" />
+          <TableColumn fx:id="PrisonerIDTC" prefWidth="75.0" text="Prisoner ID" />
+          <TableColumn fx:id="MedicalRecommendationTC" prefWidth="156.00006103515625" text="Medical Recommendation" />
+            <TableColumn fx:id="DietPlanTC" minWidth="0.0" prefWidth="80.79998779296875" text="Diet Plan" />
         </columns>
       </TableView>
-      <Button layoutX="370.0" layoutY="259.0" mnemonicParsing="false" text="Fetch Medical Recommendations&quot;" />
-      <Button layoutX="388.0" layoutY="302.0" mnemonicParsing="false" text="&quot;Create &amp; Save Special Diet" />
-      <Label layoutX="95.0" layoutY="319.0" text="Approved Diet Plan status" />
+      <Button layoutX="415.0" layoutY="259.0" mnemonicParsing="false" onAction="#FetchMedicalRecommendationsButtonOA" text="Fetch Medical Recommendations" />
+      <Button layoutX="415.0" layoutY="302.0" mnemonicParsing="false" onAction="#CreateAndSaveSpecialDietButtonOA" text="Create &amp; Save Special Diet" />
+      <Label fx:id="ApprovedDietPlanstatusLabel" layoutX="95.0" layoutY="319.0" text="Approved Diet Plan status" />
       <Label layoutX="19.0" layoutY="37.0" text="Prisoner ID" />
       <Label layoutX="37.0" layoutY="69.0" text="Dietary Restrictions &amp; Medical Notes" />
+      <Button layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackButtonOA" text="Back" />
    </children>
 </AnchorPane>

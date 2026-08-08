@@ -7,23 +7,23 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.PrisonAccountant.SupplierPaymentManagementViewController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.PrisonAccountant.SupplierPaymentManagementViewController">
    <children>
-      <TextField layoutX="422.0" layoutY="34.0" />
-      <TextField layoutX="422.0" layoutY="75.0" />
-      <TableView layoutX="33.0" layoutY="126.0" prefHeight="200.0" prefWidth="366.0">
+      <TextField fx:id="SupplierInvoiceIDTF" layoutX="422.0" layoutY="34.0" />
+      <TextField fx:id="PaymentAmountTF" layoutX="422.0" layoutY="75.0" />
+      <TableView fx:id="SupplierPaymentManagementTV" layoutX="33.0" layoutY="126.0" prefHeight="200.0" prefWidth="377.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Invoice ID" />
-          <TableColumn prefWidth="96.800048828125" text="Supplier Name" />
-            <TableColumn prefWidth="96.80003356933594" text="Invoice Amount" />
-            <TableColumn prefWidth="99.199951171875" text="Payment Status" />
+          <TableColumn fx:id="InvoiceIDTC" prefWidth="75.0" text="Invoice ID" />
+          <TableColumn fx:id="SupplierNameTC" prefWidth="96.800048828125" text="Supplier Name" />
+            <TableColumn fx:id="InvoiceAmountTC" prefWidth="96.80003356933594" text="Invoice Amount" />
+            <TableColumn fx:id="PaymentStatusTC" prefWidth="99.199951171875" text="Payment Status" />
         </columns>
       </TableView>
-      <Button layoutX="445.0" layoutY="200.0" mnemonicParsing="false" text="Fetch Invoice" />
-      <Button layoutX="445.0" layoutY="251.0" mnemonicParsing="false" text="Process Supplier Payment" />
+      <Button layoutX="415.0" layoutY="200.0" mnemonicParsing="false" onAction="#FetchInvoiceButtonOA" text="Fetch Invoice" />
+      <Button layoutX="415.0" layoutY="251.0" mnemonicParsing="false" onAction="#ProcessSupplierPaymentButtonOA" text="Process Supplier Payment" />
       <Label layoutX="312.0" layoutY="38.0" text="Supplier Invoice ID" />
       <Label layoutX="319.0" layoutY="79.0" text="Payment Amount" />
-      <Label layoutX="239.0" layoutY="368.0" prefHeight="18.0" prefWidth="195.0" text="Payment Receipt Confirmation" />
+      <Label fx:id="PaymentReceiptConfirmationLabel" layoutX="221.0" layoutY="367.0" prefHeight="18.0" prefWidth="195.0" text="Payment Receipt Confirmation" />
+      <Button layoutX="23.0" layoutY="22.0" mnemonicParsing="false" onAction="#BackButtonOA" text="Back" />
    </children>
 </AnchorPane>

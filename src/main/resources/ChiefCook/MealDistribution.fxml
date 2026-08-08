@@ -7,25 +7,25 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.ChiefCook.MealDistributionViewController">
    <children>
-      <TextField layoutX="122.0" layoutY="27.0" />
-      <TextField layoutX="113.0" layoutY="95.0" />
-      <Label layoutX="56.0" layoutY="30.0" prefHeight="18.0" prefWidth="29.0" text="Ward" />
+      <TextField fx:id="WardTF" layoutX="122.0" layoutY="27.0" />
+      <TextField fx:id="ServingsDeliveredTF" layoutX="113.0" layoutY="95.0" />
+      <Label layoutX="83.0" layoutY="30.0" prefHeight="18.0" prefWidth="29.0" text="Ward" />
       <Label layoutX="7.0" layoutY="99.0" text="Servings Delivered" />
-      <TextField layoutX="363.0" layoutY="27.0" />
-      <Label layoutX="300.0" layoutY="30.0" prefHeight="18.0" prefWidth="29.0" text="Time" />
-      <TableView layoutX="5.0" layoutY="152.0" prefHeight="200.0" prefWidth="323.0">
+      <TextField fx:id="TimeTF" layoutX="363.0" layoutY="27.0" />
+      <Label layoutX="315.0" layoutY="30.0" prefHeight="18.0" prefWidth="29.0" text="Time" />
+      <TableView fx:id="MealDistributionTV" layoutX="39.0" layoutY="152.0" prefHeight="200.0" prefWidth="323.0">
         <columns>
-          <TableColumn prefWidth="44.0" text="Ward" />
-          <TableColumn prefWidth="106.4000244140625" text="Allocated Meals" />
-            <TableColumn prefWidth="116.800048828125" text="Distributed Meals" />
-            <TableColumn prefWidth="55.199951171875" text="Status" />
+          <TableColumn fx:id="WardTC" prefWidth="44.0" text="Ward" />
+          <TableColumn fx:id="AllocatedMealsTC" prefWidth="106.4000244140625" text="Allocated Meals" />
+            <TableColumn fx:id="DistributedMealsTC" prefWidth="116.800048828125" text="Distributed Meals" />
+            <TableColumn fx:id="StatusTC" prefWidth="55.199951171875" text="Status" />
         </columns>
       </TableView>
-      <Button layoutX="438.0" layoutY="104.0" mnemonicParsing="false" text="Fetch Meal Allocations" />
-      <Button layoutX="438.0" layoutY="152.0" mnemonicParsing="false" text="Save Distribution Record" />
-      <Label layoutX="356.0" layoutY="301.0" text="Distribution Status" />
+      <Button layoutX="415.0" layoutY="104.0" mnemonicParsing="false" onAction="#FetchMealAllocationsButtonOA" text="Fetch Meal Allocations" />
+      <Button layoutX="415.0" layoutY="152.0" mnemonicParsing="false" onAction="#SaveDistributionRecordButtonOA" text="Save Distribution Record" />
+      <Label fx:id="DistributionStatusLabel" layoutX="426.0" layoutY="352.0" text="Distribution Status" />
+      <Button layoutX="13.0" layoutY="18.0" mnemonicParsing="false" onAction="#BackButtonOA" text="Back" />
    </children>
 </AnchorPane>
