@@ -98,7 +98,7 @@ public class PolicyManagementController {
                         latestDescription = p.getDescription();
                     }
                 } catch (EOFException e) {
-                    break; // Reached end of binary file
+                    break;
                 }
             }
 
