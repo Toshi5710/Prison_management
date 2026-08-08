@@ -4,6 +4,7 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prison_management.PrisonWarden.AccountRevocationsController">
@@ -12,6 +13,19 @@
       <Text layoutX="94.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input target Employee ID :" />
       <TextField fx:id="InputTargetEmployeeIDTF" layoutX="246.0" layoutY="86.0" />
       <CheckBox fx:id="ActiveAccountCheckBox" layoutX="242.0" layoutY="129.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="182.0" text="Active Account" />
-      <Button layoutX="237.0" layoutY="251.0" mnemonicParsing="false" onAction="#SaveAccessSettingsOA" prefHeight="54.0" prefWidth="126.0" text="Save Access Settings" />
+      <Button layoutX="225.0" layoutY="251.0" mnemonicParsing="false" onAction="#SaveAccessSettingsOA" prefHeight="54.0" prefWidth="150.0" text="Save Access Settings">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="14.0" layoutY="18.0" mnemonicParsing="false" onAction="#BackOA" text="Back">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="450.0" layoutY="86.0" mnemonicParsing="false" onAction="#ShowStatusOA" text="Show Status">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
